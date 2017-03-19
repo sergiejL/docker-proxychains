@@ -8,5 +8,6 @@ RUN apt-get update \
     && mkdir -p $HOME/.proxychains 
 
 ADD proxychains.conf /etc/
+ADD init.sh /
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/init.sh"]
