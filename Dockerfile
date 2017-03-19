@@ -7,6 +7,6 @@ RUN apt-get update \
         rsync wget curl \
     && mkdir -p $HOME/.proxychains 
 
-ADD proxychains.conf $HOME/.proxychains/
+ADD proxychains.conf /root/.proxychains/
 
 ENTRYPOINT ["/bin/bash"]
