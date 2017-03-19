@@ -2,6 +2,11 @@ FROM ubuntu:16.04
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        proxychains
+        proxychains \
+        vim-tiny \
+        rsync wget curl \
+    && mkdir -p $HOME/.proxychains 
 
-ENTRYPOINT ["proxychains"]
+ADD proxychains.conf $HOME/.proxychains/
+
+ENTRYPOINT ["/bin/bash"]
