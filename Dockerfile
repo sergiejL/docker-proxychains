@@ -4,7 +4,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         proxychains \
         vim \
-        rsync wget curl \
+        openssh-client rsync wget curl \
     && mkdir -p $HOME/.proxychains 
 
 ADD proxychains.conf /etc/
