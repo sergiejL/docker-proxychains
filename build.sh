@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker build -t proxychains .
+docker build -t dclong/proxychains .
