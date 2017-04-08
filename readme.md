@@ -7,9 +7,18 @@
 ## Usage 
 
 ```
-docker run -d -e DOCKER_USER_ID=`id -u` -e DOCKER_USER=`id -un` -e DOCKER_PASSWORD=`id -un` -v $HOME:/home/`id -un` dclong/proxychains
+docker run -d \
+    -e DOCKER_USER=`id -un` \
+    -e DOCKER_USER_ID=`id -u` \
+    -e DOCKER_PASSWORD=`id -un` \
+    -v $HOME:/home/`id -un` \
+    dclong/proxychains
 ```
 
 ```
-docker run -it -e DOCKER_USER_ID=`id -u` -e DOCKER_USER=`id -un` -e DOCKER_PASSWORD=`id -un` -v $HOME:/home/`id -un` dclong/proxychains
+docker run -it \
+    -e DOCKER_USER=`id -un` \
+    -e DOCKER_USER_ID=`id -u` \
+    -v $HOME:/home/`id -un` \
+    dclong/proxychains
 ```
