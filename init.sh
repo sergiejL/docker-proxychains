@@ -10,7 +10,7 @@ mkdir -p $HOME
 chown -R $USER:$USER $HOME
 echo ${USER}:${PASSWORD} | chpasswd
 
-# su -m $USER && echo $PASSWORD | sudo -S -u $USER ${1:-/script.sh}
+su -m $USER && echo $PASSWORD | sudo -S -u $USER ${1:-/script.sh}
 # if [[ "$#" == 0 ]]; then
     # su -m $USER && echo $PASSWORD | sudo -S -u $USER /script.sh
 # else

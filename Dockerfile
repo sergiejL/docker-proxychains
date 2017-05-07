@@ -8,5 +8,6 @@ RUN apt-get update \
 
 ADD proxychains.conf /etc/
 ADD init.sh /
+ADD script.sh /
 
 ENTRYPOINT ["/init.sh"]
