@@ -3,6 +3,7 @@ FROM ubuntu
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         proxychains \
+        sudo \
         vim \
         openssh-client rsync wget curl
 
